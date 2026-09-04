@@ -12,6 +12,7 @@ export const proyectos: FeaturedProject[] = [
             'Node.js',
             'Express',
             'MySQL'],
+        image: '/projects/agendaok-agenda.png',
         demoUrl: 'https://app.agendaok.com.ar/the-barba',
         repositoryUrl: 'https://github.com/jorge-alo/Agenda-Estilista-Client',
         caseStudyUrl: '/proyectos/agendaok'
@@ -25,6 +26,7 @@ export const proyectos: FeaturedProject[] = [
             'Node.js',
             'Express',
             'MySQL'],
+        image: '/projects/morfis-menu.png',
         demoUrl: 'https://www.morfis.com.ar/morfis',
         repositoryUrl: 'https://github.com/jorge-alo/Morfys',
         caseStudyUrl: '/proyectos/morfis'
@@ -60,11 +62,11 @@ export const proyectosAprendisajes: LearningProject[] = [
         technologies: ['Next.js',
             'React',
             'TypeScript', 'CSS', 'Modules',
-             'Hook Form',
+            'Hook Form',
             'Zod',
             'TanStack Query'
         ],
         demoUrl: 'https://sha-dusky.vercel.app/',
-        repositoryUrl:' https://github.com/jorge-alo/sha',
+        repositoryUrl: ' https://github.com/jorge-alo/sha',
     }
 ]

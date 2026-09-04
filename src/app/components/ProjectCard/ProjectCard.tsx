@@ -1,10 +1,19 @@
 import { FeaturedProject } from "@/app/shared/types/FeaturedProject"
 import Link from "next/link"
 import styles from './ProjectCard.module.css'
+import Image from "next/image"
 
 export const ProjectCard = ({ project }: { project: FeaturedProject }) => {
   return (
     <div className={styles.card}>
+      <div className={styles.imageContainer}>
+        <Image
+          src={project.image}
+          alt={`Captura de ${project.name}`}
+          fill
+          sizes="(max-width: 700px) 100vw, 50vw"
+        />
+      </div>
       <h2 className={styles.title}> {project.name} </h2>
       <p className={styles.description}> {project.description} </p>
       <ul className={styles.technologies}>

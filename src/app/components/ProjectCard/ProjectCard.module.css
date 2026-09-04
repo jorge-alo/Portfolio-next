@@ -16,6 +16,19 @@
     border-color: var(--accent);
 }
 
+.imageContainer {
+    position: relative;
+    width: 100%;
+    height: 240px;
+    overflow: hidden;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+}
+
+.imageContainer img {
+    object-fit: cover;
+}
+
 .title {
     font-size: 28px;
 }
