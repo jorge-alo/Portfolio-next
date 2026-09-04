@@ -16,6 +16,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+
+  metadataBase: new URL("https://portfolio-next-three-omega.vercel.app/"),
   title: "Jorge Altamirano | Fullstack Web Developer",
   description:
     "Portfolio de Jorge Altamirano, Fullstack Web Developer. Desarrollo aplicaciones web completas con React, Next.js, Node.js, Express y MySQL.",
