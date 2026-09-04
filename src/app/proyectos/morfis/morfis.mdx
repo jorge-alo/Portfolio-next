@@ -1,0 +1,125 @@
+import { CaseStudyLinks } from "@/app/components/CaseStudyLinks/CaseStudyLinks"
+import { TechStack } from "@/app/components/TechStack/TechStack"
+import { TechStackDetails } from "@/app/components/TechStackDetails/TechStackDetails"
+import { CaseStudySection } from "@/app/components/CaseStudySection/CaseStudySection"
+
+# Morfis
+
+> SaaS de menú digital y gestión de pedidos para negocios gastronómicos.
+
+<TechStack
+  technologies={[
+    "React",
+    "Vite",
+    "Node.js",
+    "Express",
+    "MySQL"
+  ]}
+/>
+
+<CaseStudyLinks
+  landingUrl="https://www.morfis.com.ar/"
+  demoUrl="https://www.morfis.com.ar/morfis"
+  repositoryUrl="https://github.com/jorge-alo/Morfys"
+/>
+
+<CaseStudySection title="Visión General">
+
+Morfis es un SaaS de menú digital destinado a restaurantes, bares y otros negocios gastronómicos.
+
+El sistema permite a los negocios administrar sus productos, precios e imágenes desde un panel y ofrecer a sus clientes un menú web desde el cual pueden armar un pedido y enviarlo directamente por WhatsApp.
+
+</CaseStudySection>
+
+<CaseStudySection title="El Problema">
+
+Muchos negocios gastronómicos utilizan menús impresos o soluciones digitales que requieren actualizar manualmente la información de los productos.
+
+Esto dificulta mantener los precios actualizados y puede generar trabajo adicional cuando cambian los productos, precios o disponibilidad.
+
+Además, recibir pedidos mediante WhatsApp sin una estructura previa puede generar errores y pérdida de tiempo al momento de organizar cada pedido.
+
+Morfis surge como una solución para centralizar el menú y facilitar el proceso de armado de pedidos.
+
+</CaseStudySection>
+
+<CaseStudySection title="La Solución">
+
+Morfis proporciona a cada negocio un menú digital accesible desde un enlace personalizado.
+
+Los clientes pueden consultar los productos, seleccionar cantidades y armar su pedido desde la interfaz web.
+
+Una vez finalizado, el pedido se transforma automáticamente en un mensaje de WhatsApp con los productos seleccionados y el total, permitiendo que el negocio continúe la comunicación con el cliente desde su canal habitual.
+
+Desde el panel administrativo, el negocio puede gestionar productos, precios e imágenes sin modificar el código de la aplicación.
+
+</CaseStudySection>
+
+<CaseStudySection title="Funcionalidades Principales">
+
+- Menú digital personalizado para cada negocio.
+- Gestión de productos, categorías y precios.
+- Administración de imágenes de los productos.
+- Carrito de pedidos.
+- Cálculo automático del total.
+- Generación del pedido para enviarlo por WhatsApp.
+- Panel administrativo para gestionar el contenido del menú.
+
+</CaseStudySection>
+
+<CaseStudySection title="Stack Tecnológico">
+
+<TechStackDetails
+  frontend={["React", "Vite", "CSS"]}
+  backend={["Node.js", "Express"]}
+  database={["MySQL"]}
+  infrastructure={["Vercel", "Railway"]}
+  integrations={["Cloudinary", "WhatsApp"]}
+/>
+
+</CaseStudySection>
+
+<CaseStudySection title="Desafío Técnico">
+
+Uno de los principales desafíos fue coordinar correctamente el estado del carrito y la generación del pedido antes de enviarlo a WhatsApp.
+
+El sistema debe mantener los productos seleccionados, sus cantidades y precios, calcular correctamente el total y finalmente construir un mensaje con toda la información necesaria para el negocio.
+
+También fue necesario implementar la gestión de imágenes mediante Cloudinary para permitir que los administradores puedan actualizar las imágenes de los productos sin almacenar los archivos directamente en el servidor.
+
+</CaseStudySection>
+
+## Arquitectura
+
+Morfis utiliza una arquitectura separada entre frontend, backend y base de datos.
+
+```text
+Cliente
+   │
+   ▼
+Frontend React + Vite
+   │
+   ▼
+API Node.js + Express
+   │
+   ▼
+MySQL
+```
+
+El backend también se comunica con servicios externos:
+
+```text
+                    ┌── Cloudinary
+                    │
+Frontend → Backend ─┼── MySQL
+                    │
+                    └── WhatsApp
+```
+
+El frontend está desplegado en Vercel y el backend en Railway.
+
+<CaseStudyLinks
+  landingUrl="https://www.morfis.com.ar/"
+  demoUrl="https://www.morfis.com.ar/morfis"
+  repositoryUrl="https://github.com/jorge-alo/Morfys"
+/>

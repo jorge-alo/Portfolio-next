@@ -1,0 +1,52 @@
+.section {
+  margin-top: 64px;
+}
+.section:first-child {
+  margin-top: 56px;
+}
+.section h2 {
+  font-size: 1.8rem;
+  line-height: 1.2;
+  margin-bottom: 24px;
+  color: var(--text-primary);
+}
+
+.section p {
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.section ul {
+  display: grid;
+  gap: 12px;
+  margin: 24px 0;
+  padding: 0;
+  list-style: none;
+}
+
+.section li {
+  padding: 14px 18px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background-color: var(--background-secondary);
+  color: var(--text-secondary);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .section {
+    margin-top: 44px;
+  }
+
+  .section h2 {
+    font-size: 1.5rem;
+  }
+
+  .section p,
+  .section li {
+    font-size: 1rem;
+  }
+}

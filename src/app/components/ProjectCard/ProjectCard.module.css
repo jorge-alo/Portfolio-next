@@ -1,0 +1,89 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 32px;
+    background-color: var(--background-secondary);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    border-color: var(--accent);
+}
+
+.title {
+    font-size: 28px;
+}
+
+.description {
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.technologies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    list-style: none;
+}
+
+.technology {
+    padding: 6px 12px;
+    background-color: var(--border);
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 24px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+}
+
+.links a {
+    padding: 10px 16px;
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+.primaryLink {
+    background-color: var(--accent);
+    color: var(--text-primary);
+    transition: background-color 0.2s ease;
+}
+
+.primaryLink:hover {
+    background-color: var(--accent-hover);
+}
+
+.link {
+    border: 1px solid var(--border);
+    color: var(--text-primary);
+    transition:
+        border-color 0.2s ease,
+        color 0.2s ease;
+}
+
+.link:hover {
+    border-color: var(--accent);
+    color: var(--accent-hover);
+}
+
+@media (max-width: 700px) {
+  .links {
+    flex-direction: column;
+  }
+
+  .links a {
+    width: 100%;
+    text-align: center;
+  }
+}

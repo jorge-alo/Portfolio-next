@@ -1,0 +1,33 @@
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 24px 0;
+}
+
+.container span {
+  padding: 6px 12px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background-color: var(--background-secondary);
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 600px) {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .container span {
+    text-align: center;
+  }
+
+  .container span:last-child {
+    grid-column: 1 / -1;
+    justify-self: center;
+  }
+}

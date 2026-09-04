@@ -1,0 +1,33 @@
+.navbar {
+  display: flex;
+  justify-content: center;
+  padding: 24px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.links {
+  display: flex;
+  gap: 32px;
+}
+
+.links a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.links a:hover {
+  color: var(--text-primary);
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 20px 16px;
+  }
+
+  .links {
+    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}

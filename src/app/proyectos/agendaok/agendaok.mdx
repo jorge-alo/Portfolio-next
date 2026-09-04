@@ -1,0 +1,118 @@
+import { CaseStudyLinks } from "@/app/components/CaseStudyLinks/CaseStudyLinks"
+import { TechStack } from "@/app/components/TechStack/TechStack"
+import { CaseStudySection } from "@/app/components/CaseStudySection/CaseStudySection"
+import { TechStackDetails } from "@/app/components/TechStackDetails/TechStackDetails"
+
+# AgendaOK
+
+> SaaS de gestión de turnos y reservas para negocios de servicios personales.
+
+<TechStack technologies={["React", "Vite", "Node.js", "Express", "MySQL"]} />
+
+<CaseStudyLinks
+  landingUrl="https://www.agendaok.com.ar/"
+  demoUrl="https://app.agendaok.com.ar/the-barba"
+  repositoryUrl="https://github.com/jorge-alo/Agenda-Estilista-Client"
+/>
+
+<CaseStudySection title="Visión General">
+
+AgendaOK es un SaaS diseñado para automatizar la gestión de turnos y reservas en negocios de servicios personales como barberías, peluquerías y estéticas.
+
+El sistema permite a los clientes reservar turnos online y a los negocios gestionar su agenda, servicios, profesionales y reservas desde un panel administrativo.
+
+</CaseStudySection>
+
+<CaseStudySection title="El Problema">
+
+Muchos negocios gestionan sus turnos manualmente mediante WhatsApp, mensajes de Instagram o anotaciones en papel.
+
+Esto genera pérdida de tiempo, dificultad para organizar la disponibilidad de los profesionales y problemas como reservas duplicadas o inasistencias.
+
+AgendaOK surge como una solución para centralizar este proceso y permitir que los clientes puedan reservar de forma autónoma.
+
+</CaseStudySection>
+
+<CaseStudySection title="La Solución">
+
+La aplicación proporciona a cada negocio una página pública de reservas que puede compartir con sus clientes.
+
+Desde el panel administrativo, el negocio puede gestionar sus servicios, precios, horarios, profesionales y turnos.
+
+El sistema también incorpora el cobro de señas mediante Mercado Pago y notificaciones automáticas por WhatsApp.
+
+</CaseStudySection>
+
+<CaseStudySection title="Funcionalidades Principales">
+
+- Reservas online mediante un enlace personalizado para cada negocio.
+- Panel administrativo para gestionar turnos, servicios, precios y horarios.
+- Gestión de múltiples profesionales con disponibilidad independiente.
+- Cobro de señas mediante Mercado Pago.
+- Notificaciones y recordatorios automáticos por WhatsApp.
+- Visualización de turnos y facturación.
+
+</CaseStudySection>
+
+<CaseStudySection title="Stack Tecnológico">
+
+<TechStackDetails
+  frontend={["React", "Vite", "CSS Modules"]}
+  backend={["Node.js", "Express"]}
+  database={["MySQL"]}
+  infrastructure={["Vercel", "Railway"]}
+  integrations={["Mercado Pago", "Evolution Manager"]}
+/>
+
+</CaseStudySection>
+
+<CaseStudySection title="Desafío Técnico">
+
+Uno de los principales desafíos fue controlar correctamente el estado de una reserva durante el proceso de pago.
+
+Cuando un cliente selecciona un horario, el sistema debe evitar que otro cliente pueda reservarlo simultáneamente mientras se procesa el pago.
+
+Para resolver este problema, se implementó una lógica de reserva temporal en el backend. El horario permanece reservado durante el proceso de pago y posteriormente se confirma o libera según el resultado recibido desde Mercado Pago mediante un webhook.
+
+Este flujo permite mantener la consistencia de las reservas y evitar conflictos entre clientes que intentan reservar el mismo horario.
+
+</CaseStudySection>
+
+<CaseStudySection title="Arquitectura">
+
+AgendaOK utiliza una arquitectura separada entre frontend, backend y base de datos.
+
+```text
+Cliente
+   │
+   ▼
+Frontend React + Vite
+   │
+   ▼
+API Node.js + Express
+   │
+   ▼
+MySQL
+```
+
+El backend también se comunica con servicios externos:
+
+```text
+                    ┌── Mercado Pago
+                    │
+Frontend → Backend ─┼── MySQL
+                    │
+                    └── Evolution Manager
+```
+
+El frontend está desplegado en Vercel y el backend en Railway.
+
+</CaseStudySection>
+
+## Links
+
+<CaseStudyLinks
+  landingUrl="https://www.agendaok.com.ar/"
+  demoUrl="https://app.agendaok.com.ar/the-barba"
+  repositoryUrl="https://github.com/jorge-alo/Agenda-Estilista-Client"
+/>

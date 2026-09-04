@@ -1,0 +1,74 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 24px;
+  background-color: var(--background-secondary);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  border-color: var(--accent);
+}
+
+.title {
+  font-size: 24px;
+}
+
+.description {
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  list-style: none;
+}
+
+.technology {
+  padding: 5px 10px;
+  background-color: var(--border);
+  border-radius: 6px;
+  font-size: 13px;
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 24px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+}
+
+.links a {
+  padding: 9px 14px;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+.primaryLink {
+  background-color: var(--accent);
+  color: var(--text-primary);
+}
+
+.primaryLink:hover {
+  background-color: var(--accent-hover);
+}
+
+.link {
+  border: 1px solid var(--border);
+  color: var(--text-primary);
+}
+
+.link:hover {
+  border-color: var(--accent);
+  color: var(--accent-hover);
+}

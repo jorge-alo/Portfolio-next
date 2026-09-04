@@ -1,0 +1,80 @@
+.caseStudy {
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 64px 0 96px;
+}
+
+.caseStudy h1 {
+  font-size: 3rem;
+  line-height: 1.1;
+  margin-bottom: 48px;
+  text-align: center;
+}
+
+.caseStudy strong {
+  color: var(--text-primary);
+}
+
+.caseStudy a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.caseStudy a:hover {
+  color: var(--accent-hover);
+  text-decoration: underline;
+}
+
+.caseStudy pre {
+  background-color: var(--background-secondary);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 28px;
+  margin: 28px 0;
+  overflow-x: auto;
+  font-size: 0.95rem;
+}
+
+.caseStudy pre code {
+  color: var(--text-secondary);
+}
+
+.caseStudy code {
+  font-family: monospace;
+  line-height: 1.6;
+}
+
+.caseStudy blockquote {
+  margin: -32px 0 20px;
+  padding: 0;
+  border: none;
+}
+
+.caseStudy blockquote p {
+  color: var(--text-secondary);
+  font-size: 1.25rem;
+  line-height: 1.6;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.caseStudy > div {
+  justify-content: center;
+}
+
+.caseStudy > p strong {
+  color: var(--text-primary);
+  font-size: 0.95rem;
+  letter-spacing: 0.03em;
+}
+
+@media (max-width: 768px) {
+  .caseStudy {
+    padding: 40px 0 64px;
+  }
+
+  .caseStudy h1 {
+    font-size: 2.3rem;
+    margin-bottom: 36px;
+  }
+}
